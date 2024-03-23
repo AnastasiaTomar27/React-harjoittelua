@@ -234,10 +234,10 @@ const Tervehdys = (props) => {
   )
 }
 
-const App = () => {
+const Tervehdyksia = () => {
   return (
     <div>
-      <h1>Tervehdykset</h1>
+      <h1>Tervehdyksiä:</h1>
       <Tervehdys name="Arto" />
       <Tervehdys name="Pekka" />
     </div>
@@ -254,10 +254,10 @@ const Tuote = (props) => {
   )
 }
 
-const Hinnat = () => {
+const Hintoja = () => {
   return(
     <div>
-      <h1>Hinnat</h1>
+      <h1>Hintoja:</h1>
       <Tuote 
       nimi="Maito"
       hinta="0.7"
@@ -282,10 +282,10 @@ const KokoNimi = (props) => {
   )
 }
 
-const Nimet = () => {
+const Nimia = () => {
   return(
     <div>
-      <h1>Nimet: </h1>
+      <h1>Nimiä: </h1>
       <KokoNimi 
       nimi="Pekka"
       sukunimi="Haavisto"
@@ -308,10 +308,10 @@ const Kommentti = (props) => {
   )
 }
 
-const Kommentit = () => {
+const Kommentteja = () => {
   return(
     <div>
-      <h1>Kommentit:</h1>
+      <h1>Kommentteja:</h1>
       <Kommentti 
       poliitikko="Veikko Vennamo" 
       teksti="Kyllä kansa tietää" />
@@ -543,13 +543,13 @@ root.render(
       <br />
       {<TuoteLista />}
       <br />
-      <div>{<App />}</div>
+      <div>{<Tervehdyksia />}</div>
       <br />
-      {<Hinnat />}
+      {<Hintoja />}
       <br />
-      {<Nimet />}
+      {<Nimia />}
       <br />
-      {<Kommentit />}
+      {<Kommentteja />}
       <br />
       {<Artikkelia />}
       <br />
