@@ -110,6 +110,14 @@ function Video() {
   )
 }
 
+function Video_2() {
+  return (
+    <video width="320" height="240" controls>
+      <source src='https://lumoakatemia.eu/Tehtavat/file_example_MP4_480_1_5MG.mp4' type="video/mp4" />
+    </video>  )
+}
+
+
 function HaeVuodenAika() {
   const date = new Date();
   const month = date.getMonth();
@@ -217,13 +225,287 @@ function TuoteLista() {
   );
 }
 
+//-----------------------------
+const Tervehdys = (props) => {
+  return (
+    <div>
+      <p>Hei {props.name}!</p>
+    </div>
+  )
+}
 
+const App = () => {
+  return (
+    <div>
+      <h1>Tervehdykset</h1>
+      <Tervehdys name="Arto" />
+      <Tervehdys name="Pekka" />
+    </div>
+  )
+}
+
+//-------------------------------
+
+const Tuote = (props) => {
+  return(
+    <div>
+      <p>{props.nimi}: {props.hinta}€</p>
+    </div>
+  )
+}
+
+const Hinnat = () => {
+  return(
+    <div>
+      <h1>Hinnat</h1>
+      <Tuote 
+      nimi="Maito"
+      hinta="0.7"
+      />
+      <Tuote 
+      nimi="Peruna"
+      hinta="1.2"
+      />
+      <Tuote 
+      nimi="Omena"
+      hinta="1.5"
+      />
+    </div>
+  )
+}
+
+//-------------------------
+
+const KokoNimi = (props) => {
+  return(
+    <p>{props.nimi} {props.sukunimi}</p>
+  )
+}
+
+const Nimet = () => {
+  return(
+    <div>
+      <h1>Nimet: </h1>
+      <KokoNimi 
+      nimi="Pekka"
+      sukunimi="Haavisto"
+      />
+      <KokoNimi 
+      nimi="Mario"
+      sukunimi="Hiltunen"
+      />
+    </div>
+  )
+}
+
+//------------------------------------
+
+const Kommentti = (props) => {
+  return(
+    <div>
+      <p>{props.poliitikko}: <i>{props.teksti}</i></p>
+    </div>
+  )
+}
+
+const Kommentit = () => {
+  return(
+    <div>
+      <h1>Kommentit:</h1>
+      <Kommentti 
+      poliitikko="Veikko Vennamo" 
+      teksti="Kyllä kansa tietää" />
+      <Kommentti 
+      poliitikko="Mauno Koivisto" 
+      teksti="Tarttis tehdä jotakin" />
+      <Kommentti 
+      poliitikko="Paavo Lipponen" 
+      teksti="Nahkurin orsilla tavataan" />
+      <Kommentti poliitikko="Timo Soini" 
+      teksti="Jytky" />
+    </div>
+  )
+}
+
+//-----------------------------------
+
+const Artikkeli = (props) => {
+  return(
+    <div>
+      <h2>{props.otsikko}</h2>
+      <p>{props.sisalto}</p>
+    </div>
+  )
+}
+
+const Artikkelia = () => {
+  return(
+    <div>
+      <h1>Artikkelia:</h1>
+      <Artikkeli 
+      otsikko="Lorem"
+      sisalto="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus voluptatibus nemo accusantium incidunt ea nam. Adipisci eligendi in dolorem, commodi maxime, pariatur natus debitis earum officiis, reiciendis cum minus temporibus!"
+      />
+      <Artikkeli 
+      otsikko="Lorem ipsum"
+      sisalto="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus voluptatibus nemo accusantium incidunt ea nam. Adipisci eligendi in dolorem, commodi maxime, pariatur natus debitis earum officiis, reiciendis cum minus temporibus!"
+      />
+    </div>
+  )
+}
+
+//---------------------------------------
+
+const Kirja = (props) => {
+  return(
+    <div>
+      <h3>{props.otsikko}</h3>
+      <p>Kirjailija: {props.kirjailija}</p>
+      <p>Tyylilaji: {props.tyylilaji}</p>
+    </div>
+  )
+}
+
+const Kirjoja = () => {
+  return(
+    <div>
+      <h1>Kirjoja:</h1>
+      <Kirja 
+      otsikko="Taru sormusten herrasta"
+      kirjailija="J. R. R. Tolkien"
+      tyylilaji="Fantasiakirjallisuus"
+      />
+      <Kirja 
+      otsikko="Lorum ipsum"
+      kirjailija="Mario"
+      tyylilaji="Fantasiakirjallisuus"
+      />
+    </div>
+  )
+}
+
+//----------------------------------------
+
+const Tehtava = (props) => {
+  return(
+    <div>
+      <p>Tehtävä: {props.kuvaus}</p>
+      <p>Tila: {props.onValmis}</p>
+    </div>
+  )
+}
+
+const Tehtavia = () => {
+  return(
+    <div>
+      <h1>Tehtäviä:</h1>
+      {<Tehtava
+      kuvaus="Tee kotitehtävä"
+      onValmis="Valmis"
+      />}
+      {<Tehtava
+      kuvaus="Laita ruoka"
+      onValmis="Kesken"
+      />}
+    </div>
+  )
+}
+
+//---------------------------
+
+const Elain = (props) => {
+  return(
+    <div>
+      <p>Nimi: {props.nimi}</p>
+      <p>Laji: {props.laji}</p>
+      <p>Ikä: {props.ika}</p>
+    </div>
+  )
+}
+
+const Elaimia = () => {
+  return(
+    <div>
+      <h1>Elaimiä:</h1>
+      {<Elain 
+      nimi="Mirri"
+      laji="Kissa"
+      ika="6"
+      />}
+      {<Elain 
+      nimi="Elsa"
+      laji="Koira"
+      ika="2"
+      />}
+    </div>
+  )
+}
+
+//-----------------------------
+
+const Elokuva = (props) => {
+  return (
+    <div>
+      <p>Nimi: {props.nimi}</p>
+      <p>Ohjaaja: {props.ohjaaja}</p>
+      <p>Vuosi: {props.vuosi}</p>
+    </div>
+  )
+}
+
+const Elokuvia = () => {
+  return(
+    <div>
+      <h1>Elokuvia:</h1>
+      {<Elokuva
+      nimi="Avatar"
+      ohjaaja="James Cameron"
+      vuosi="2017"
+      />}
+      {<Elokuva
+      nimi="Avatar 2"
+      ohjaaja="James Cameron"
+      vuosi="2019"
+      />}
+    </div>
+  )
+}
+
+//-----------------------------------
+
+const Saa = (props) => {
+  return(
+    <div>
+      <p>Sijaitni: {props.sijainti}</p>
+      <p>Lämpotila: {props.lampotila}</p>
+      <p>Olosuhteet: {props.olosuhteet}</p>
+    </div>
+  )
+}
+
+const Saan_Tiedot = () => {
+  return(
+    <div>
+      <h1>Sään Tiedot:</h1>
+      {<Saa
+      sijainti="Helsinki"
+      lampotila="-1 °C"
+      olosuhteet="Sateen mahdollisuus 0%"
+      />}
+      {<Saa
+      sijainti="Vantaa"
+      lampotila="0 °C"
+      olosuhteet="Sateen mahdollisuus 10%"
+      />}
+  </div>
+  )
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <div>
-    <div>{<Navigointi />}</div>
+      <div>{<Navigointi />}</div>
       <br />
       <br />
       <DivElementti />
@@ -244,6 +526,9 @@ root.render(
       < Kartta />
       <br />
       < Video />
+      <br />
+      < Video_2 />
+      <br />
       <div>Vuoden aika: { <HaeVuodenAika /> }</div>
       <br />
       <div>Satunnaisluku: { <HaeSatunnaisluku /> }</div>
@@ -257,6 +542,26 @@ root.render(
       <div>{<MapNimet />}</div>
       <br />
       {<TuoteLista />}
+      <br />
+      <div>{<App />}</div>
+      <br />
+      {<Hinnat />}
+      <br />
+      {<Nimet />}
+      <br />
+      {<Kommentit />}
+      <br />
+      {<Artikkelia />}
+      <br />
+      <Kirjoja />
+      <br />
+      <Tehtavia />
+      <br />
+      <Elaimia/>
+      <br />
+      <Elokuvia/>
+      <br />
+      <Saan_Tiedot/>
     </div>
   </React.StrictMode>
 );
